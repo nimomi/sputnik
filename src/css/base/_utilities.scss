@@ -1,0 +1,43 @@
+a {
+  outline: 0;
+  cursor: pointer;
+}
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+fieldset {
+  margin: 0;
+}
+
+.util.accessible-text {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0 !important !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+.util.accessible-text a,
+.util.accessible-text a:link,
+.util.accessible-text a:visited,
+.util.accessible-text a:hover,
+.util.accessible-text a:active,
+.util.accessible-text a:focus {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0 !important !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+.util.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}

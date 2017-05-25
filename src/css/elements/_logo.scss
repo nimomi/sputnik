@@ -1,0 +1,20 @@
+.#{$ns}-logo {
+  padding: 0;
+  display: inline-block;
+  img {
+    width: auto;
+    height: auto;
+    @include respond-to('small') {
+      width: auto;
+      height: auto;
+    }
+  }
+  &-wrapper {
+        font-size: 1.2rem;
+        display: inline-block;
+        padding: $default_padding*4 0;
+        .#{$ns}-logo-text {
+            padding-left: $default_padding;
+        }
+    }
+}

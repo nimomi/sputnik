@@ -1,0 +1,30 @@
+.#{$ns}-tooltip-content {
+    display: none;
+    position: absolute;
+    background-color: $companyname_darker_grey;
+    border-radius: 5px;
+    padding: 10px;
+    color: $white;
+
+    &.#{$ns}-slide-right {
+        animation: slide-right;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+
+        @keyframes slide-right {
+            from {
+                opacity: 0;
+                margin-left: -50px;
+            }
+            to {
+                opacity: 1;
+                margin-left: 0;
+            }
+        }
+    }
+}   
+
+
+.#{$ns}-tooltip i {
+    padding-left: 10px;
+}

@@ -1,0 +1,217 @@
+@mixin linear-gradient($startColor: $companyname_blue, $endColor: $companyname_dark_blue) {
+  background: linear-gradient($startColor, $endColor);
+}
+
+/*
+ * Box Shadow
+ */
+@mixin box-shadow($top: 0px, $left: 1px, $blur: 2px, $color: $companyname_light_grey, $inset: false) {
+  @if $inset {
+    box-shadow: inset $top $left $blur $color;
+  }
+  @else {
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+/*
+ * Border longhand version
+ */
+@mixin border($width, $style, $color, $sides) {
+  @if($width != "" and $style != "" and $color != "") {
+    @if($sides == "") {
+      border: 0;
+      border-width: $width;
+      border-style: $style;
+      border-color: $color;
+    }
+    @else {
+      @each $side in $sides {
+        @if($side == 'top' or $side == 'right' or $side == 'bottom' or $side == 'left') {
+          border: 0;
+          border-#{$side}-width: $width;
+          border-#{$side}-style: $style;
+          border-#{$side}-color: $color;
+        }
+      }
+    }
+  }
+}
+
+
+
+/*
+ * Get link colors
+ */
+@mixin link($link: $companyname_blue, $visit: $companyname_dark_blue, $hover: $companyname_dark_blue, $active: $companyname_dark_blue) {
+  color: $link;
+  &:visited {
+    color: $visit;
+  }
+  &:hover {
+    color: $hover;
+  }
+  &:active {
+    color: $active;
+  }
+}
+
+/*
+ * Retina Images
+ */
+@mixin image-2x($image, $width, $height) {
+  @media (min--moz-device-pixel-ratio: 1.3),
+  (-o-min-device-pixel-ratio: 2.6/2),
+  (-webkit-min-device-pixel-ratio: 1.3),
+  (min-device-pixel-ratio: 1.3),
+  (min-resolution: 1.3dppx) {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url($image);
+    background-size: $width $height;
+  }
+}
+
+/*
+ * Clearfix
+ */
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+/********** Usage **********
+
+.article {
+     @include clearfix();
+}
+*/
+/*
+ * Border Radius
+ */
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+}
+
+// Single side border-radius
+/********* Usage *******
+
+.button {
+  @include border-radius(5px);
+}
+
+*/
+/*
+ * flexbox
+ */
+@mixin flex($direction: column) {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: $direction;
+}
+@mixin flex-wrap($wrap: nowrap) {
+  flex-wrap: $wrap;
+}
+@mixin flex-justify-content($justify: space-between) {
+  justify-content: $justify;
+}
+@mixin flex-align-items($align: stretch) {
+  webkit-align-items: $align;
+  align-items: $align;
+}
+
+/*
+ * Opacity
+ */
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter:alpha(opacity=$opacity-ie); //IE8
+}
+
+/********* Usage *******
+
+.heading {
+  @include opacity(0.8);
+}
+
+*/
+/*
+ * Font size
+ */
+@mixin font-size($sizeValue: 12 ) {
+  font-size: $sizeValue + px; //fallback for old browsers
+  font-size: (0.125 * $sizeValue) + rem;
+}
+
+/********* Usage *******
+
+body {
+  @include font-size(16);
+}
+
+*/
+
+/* these below are some margin and padding util classes need to be used in limitations */
+@for $i from 0 through 4 {
+  $multiplier: 5 * $i;
+  .#{$ns}-margin-#{$multiplier} {
+    margin: #{$multiplier}px!important;
+  }
+  .#{$ns}-margin-sides-#{$multiplier} {
+    margin-left: #{$multiplier}px!important;
+    margin-right: #{$multiplier}px!important;
+  }
+  .#{$ns}-margin-top-#{$multiplier} {
+    margin-top: #{$multiplier}px!important;
+  }
+  .#{$ns}-margin-right-#{$multiplier} {
+    margin-right: #{$multiplier}px!important;
+  }
+  .#{$ns}-margin-bottom-#{$multiplier} {
+    margin-bottom: #{$multiplier}px!important;
+  }
+  .#{$ns}-margin-left-#{$multiplier} {
+    margin-left: #{$multiplier}px!important;
+  }
+}
+@for $i from 0 through 4 {
+  $multiplier: 5 * $i;
+  .#{$ns}-padding-#{$multiplier} {
+    padding: #{$multiplier}px;
+  }
+  .#{$ns}-padding-sides-#{$multiplier} {
+    padding-left: #{$multiplier}px!important;
+    padding-right: #{$multiplier}px!important;
+  }
+  .#{$ns}-padding-top-#{$multiplier} {
+    padding-top: #{$multiplier}px!important;
+  }
+  .#{$ns}-padding-right-#{$multiplier} {
+    padding-right: #{$multiplier}px!important;
+  }
+  .#{$ns}-padding-bottom-#{$multiplier} {
+    padding-bottom: #{$multiplier}px!important;
+  }
+  .#{$ns}-padding-left-#{$multiplier} {
+    padding-left: #{$multiplier}px!important;
+  }
+}
+
+//a few more margin and padding classes for larger tops and bottoms
+@for $i from -5 through 5 {
+  $multiplier: 10 * $i;
+  .#{$ns}-margin-top-#{$multiplier} {
+    margin-top: #{$multiplier}px;
+  }
+  .#{$ns}-margin-bottom-#{$multiplier} {
+    margin-bottom: #{$multiplier}px;
+  }
+}

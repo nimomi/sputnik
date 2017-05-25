@@ -1,0 +1,51 @@
+/*
+ * styles.scss
+*/
+
+@charset "UTF-8";
+
+@import 
+"base/variables",
+"base/mixins",
+"base/colors",
+"base/typography";
+
+/*
+ * Elements
+ */
+@import
+"elements/buttons",
+"elements/checkbox",
+"elements/input",
+"elements/logo",
+"elements/textarea",
+"elements/radiobutton",
+"elements/toggle-switch",
+"elements/select",
+"elements/datepicker";
+
+/*
+ * Modules
+ */
+@import
+"modules/accordion",
+"modules/modal",
+"modules/tab",
+"modules/tooltip",
+"modules/cards",
+"modules/megamenu",
+"modules/carousel";
+
+/*
+ * Layout
+ */
+@import
+"modules/header",
+"modules/footer";
+
+
+/*
+ * Utilities class need to apply after all classes applied
+ */
+ @import
+ "base/utilities";

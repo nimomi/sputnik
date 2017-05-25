@@ -1,0 +1,216 @@
+<!-- Module article-->
+<article class="libraryuidocs-module-article" id="gridsystem">
+    <div class="libraryuidocs-module-article-header">
+        <h1 class="libraryuidocs-module-article-title libraryuidocsh1">Grid System</h1>
+    </div>
+    <section class="libraryuidocs-module-article-content">
+
+
+      <div class="libraryuidocs-partials half">
+      <h2 class="libraryuidocs-partials-title libraryuidocsh2">How grid works</h2>
+      <!-- Your element code starts here -->
+            <div>
+                <p>Bootstrap includes a responsive, mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. It includes predefined classes for easy layout options, as well as powerful mixins for generating more semantic layouts.</p>
+                <p>Grid systems are used for creating page layouts through a series of rows and columns that house your content. Here's how the Bootstrap grid system works</p>
+                <ul class="libraryuidocs-list-styled"> 
+                    <li>Rows must be placed within a ".container" (fixed-width) or ".container-fluid" (full-width) for proper alignment and padding.</li> 
+                    <li>Use rows to create horizontal groups of columns.</li> 
+                    <li>Content should be placed within columns, and only columns may be immediate children of rows.</li> 
+                    <li>Predefined grid classes like ".row" and ".col-xs-4" are available for quickly making grid layouts. Less mixins can also be used for more semantic layouts.</li> 
+                    <li>Columns create gutters (gaps between column content) via "padding". That padding is offset in rows for the first and last column via negative margin on ".row"s.</li> 
+                    <li>The negative margin is why the examples below are outdented. It's so that content within grid columns is lined up with non-grid content.</li> 
+                    <li>Grid columns are created by specifying the number of twelve available columns you wish to span. For example, three equal columns would use three ".col-xs-4"</li> 
+                    <li>If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line.</li> 
+                    <li>Grid classes apply to devices with screen widths greater than or equal to the breakpoint sizes, and override grid classes targeted at smaller devices. Therefore, e.g. applying any ".col-md-*" class to an element will not only affect its styling on medium devices but also on large devices if a ".col-lg-*" class is not present.</li> 
+                </ul>
+            </div>
+      <!-- Your element code end here -->
+    
+      
+    </div>
+
+
+      <div class="libraryuidocs-partials half" id="container">
+      <h2 class="libraryuidocs-partials-title libraryuidocsh2">Containers</h2>
+      <!-- Your element code starts here -->
+            <div>
+                <p>Understading the container system is very important in Bootstrap and this part is also linked with how Bootstrap uses "row" and "col".</p>
+                <p>Bootstrap requires a containing element to wrap site contents and house our grid system. You may choose one of two containers to use in your projects. Note that, due to padding and more, neither container is nestable.</p>
+                <p>Use ".container" for a responsive fixed width container and <br />Use ".container-fluid" for a full width container, spanning the entire width of your viewport.</p>
+                <p>You can use these container classes a number of times depending the layout design, don't mistake these as container for the entire page.</p>
+                <p>In Bootstrap it is important to understand how the gutters are placed and these are laid in their ."container/.container-fluid" ".row" and ".col-*" system</p>
+                <ul class="libraryuidocs-list-styled">
+                    <li>".container" and ".container-fluid" has padding left/right as 15px</li>
+                    <li>".row" has margin left/right as negative 15px, this is to remove the padding in container and set full width</li>
+                    <li>".col-*" has padding left/right as 15px</li>
+                </ul>
+                <p>If need be these can be over-ruled</p>
+            </div>
+      <!-- Your element code end here -->
+    
+      
+    </div>
+        
+        
+        
+        <div class="libraryuidocs-partials half" id="mediaqueries">
+      <h2 class="libraryuidocs-partials-title libraryuidocsh2">Media Queries</h2>
+      <!-- Your element code starts here -->
+            <div>
+                <p>Keeping media queries is very important for the RWD projects and also to keep the right Breakpoints. We have used SASS to generte all ouor CSS and it has precompileres to set CSS and Media queries for every element in the relational scss file.</p>
+                 <p>Keeping in mind the Mobile First design, note that the basic start for your CSS files are for Mobile First and then the breakpoints are added subsequently, for Tablet, Desktop and Large Desktop</p>
+                 <p>Currently we have set this to 3 breakpoints <br /> - Small devices (tablets, 768px and up) <br /> - Medium devices (desktops, 992px and up) <br /> - Large devices (large desktops, 1200px and up)</p>
+            </div>
+      <!-- Your element code end here -->
+    <!-- code snippet come below -->
+      <div class="libraryuidocs-partials-code">
+        <span class="libraryuidocs-partials-code-title">Code</span>
+        <pre class="prettyprint"><code class="lang-html" style="display:inline-block"></code></pre>
+      </div>
+            
+      
+            <p>We occasionally expand on these media queries to include a "max-width" to limit CSS to a narrower set of devices. </p>
+            <p>But often this is seen as an edge case, it only used when a desired design scenario is not achievable with the basic media queries </p>
+            
+            <div class="libraryuidocs-partials-code">
+        <span class="libraryuidocs-partials-code-title">Code</span>
+        <pre class="prettyprint"><code class="lang-html" style="display:inline-block"></code></pre>
+      </div>
+            
+    </div>
+		
+
+    	<!-- Your Element/Sub elements starts here -->
+		<div class="libraryuidocs-partials half" id="gridlayout">
+      <h2 class="libraryuidocs-partials-title libraryuidocsh2">Grid Layout</h2>
+			<h3 class="libraryuidocs-partials-title libraryuidocsh2">Example: Stacked-to-horizontal</h3>
+			<!-- Your element code starts here -->
+            <div class="row libraryuidocs-show-grid">
+              <div class="col-md-1">.col-md-1</div>
+              <div class="col-md-1">.col-md-1</div>
+              <div class="col-md-1">.col-md-1</div>
+              <div class="col-md-1">.col-md-1</div>
+              <div class="col-md-1">.col-md-1</div>
+              <div class="col-md-1">.col-md-1</div>
+              <div class="col-md-1">.col-md-1</div>
+              <div class="col-md-1">.col-md-1</div>
+              <div class="col-md-1">.col-md-1</div>
+              <div class="col-md-1">.col-md-1</div>
+              <div class="col-md-1">.col-md-1</div>
+              <div class="col-md-1">.col-md-1</div>
+            </div>
+            <div class="row libraryuidocs-show-grid">
+              <div class="col-md-8">.col-md-8</div>
+              <div class="col-md-4">.col-md-4</div>
+            </div>
+            <div class="row libraryuidocs-show-grid">
+              <div class="col-md-4">.col-md-4</div>
+              <div class="col-md-4">.col-md-4</div>
+              <div class="col-md-4">.col-md-4</div>
+            </div>
+            <div class="row libraryuidocs-show-grid">
+              <div class="col-md-6">.col-md-6</div>
+              <div class="col-md-6">.col-md-6</div>
+            </div>
+			<!-- Your element code end here -->
+		<!-- code snippet come below -->
+			<div class="libraryuidocs-partials-code">
+				<span class="libraryuidocs-partials-code-title">Code</span>
+				<pre class="prettyprint"><code class="lang-html" style="display:inline-block" ></code></pre>
+			</div>
+			
+		</div>
+        
+        
+            	<!-- Your Element/Sub elements starts here -->
+		<div class="libraryuidocs-partials half">
+			<h3 class="libraryuidocs-partials-title libraryuidocsh2">Example: Responsive Mobile and desktop</h3>
+            <div>
+                <p>Don't want your columns to simply stack in smaller devices? Use the extra small and medium device grid classes by adding ".col-xs-*" ".col-md-*" to your columns. See the example below for a better idea of how it all works.</p>
+            </div>
+            
+			<!-- Your element code starts here -->
+            <div class="row libraryuidocs-show-grid">
+              <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
+              <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+            </div>
+
+            <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+            <div class="row libraryuidocs-show-grid">
+              <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+              <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+              <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+            </div>
+
+            <!-- Columns are always 50% wide, on mobile and desktop -->
+            <div class="row libraryuidocs-show-grid">
+              <div class="col-xs-6">.col-xs-6</div>
+              <div class="col-xs-6">.col-xs-6</div>
+            </div>
+			<!-- Your element code end here -->
+		<!-- code snippet come below -->
+			<div class="libraryuidocs-partials-code">
+				<span class="libraryuidocs-partials-code-title">Code</span>
+				<pre class="prettyprint"><code class="lang-html" style="display:inline-block" ></code></pre>
+			</div>
+			
+		</div>
+        
+        
+             	<!-- Your Element/Sub elements starts here -->
+		<div class="libraryuidocs-partials half">
+			<h3 class="libraryuidocs-partials-title libraryuidocsh2">Example: Responsive Mobile and desktop</h3>
+            <div>
+                <p>Don't want your columns to simply stack in smaller devices? Use the extra small and medium device grid classes by adding ".col-xs-*" ".col-md-*" to your columns. See the example below for a better idea of how it all works.</p>
+            </div>
+            
+			<!-- Your element code starts here -->
+            <div class="row libraryuidocs-show-grid">
+              <div class="col-xs-12 col-sm-6 col-md-8">.col-xs-12 .col-sm-6 .col-md-8</div>
+              <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+            </div>
+            <div class="row libraryuidocs-show-grid">
+              <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+              <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+              <!-- Optional: clear the XS cols if their content doesn't match in height -->
+              <div class="clearfix visible-xs-block"></div>
+              <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+            </div>
+			<!-- Your element code end here -->
+		<!-- code snippet come below -->
+			<div class="libraryuidocs-partials-code">
+				<span class="libraryuidocs-partials-code-title">Code</span>
+				<pre class="prettyprint"><code class="lang-html" style="display:inline-block" ></code></pre>
+			</div>
+			
+		</div>
+        
+
+<!-- Your Element/Sub elements starts here -->
+		<div class="libraryuidocs-partials half">
+			<h3 class="libraryuidocs-partials-title libraryuidocsh2">Example: Offsetting columns</h3>
+			<!-- Your element code starts here -->
+           <div class="row libraryuidocs-show-grid">
+              <div class="col-md-4">.col-md-4</div>
+              <div class="col-md-4 col-md-offset-4">.col-md-4 .col-md-offset-4</div>
+            </div>
+            <div class="row libraryuidocs-show-grid">
+              <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
+              <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
+            </div>
+            <div class="row libraryuidocs-show-grid">
+              <div class="col-md-6 col-md-offset-3">.col-md-6 .col-md-offset-3</div>
+            </div>
+			<!-- Your element code end here -->
+		<!-- code snippet come below -->
+			<div class="libraryuidocs-partials-code">
+				<span class="libraryuidocs-partials-code-title">Code</span>
+				<pre class="prettyprint"><code class="lang-html" style="display:inline-block" ></code></pre>
+			</div>
+			
+		</div>
+
+    </section>
+</article>
+<!-- End Module article-->
+

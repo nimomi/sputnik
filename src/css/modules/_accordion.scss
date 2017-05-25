@@ -1,0 +1,30 @@
+.#{$ns}-accordion {
+    padding-top: $default_padding*2;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        .#{$ns}-inner {
+            padding-left: $default_padding*3;
+            overflow: hidden;
+            display: none;
+        }
+    }
+
+    li {
+        margin: $default_margin*2 0;
+    }
+
+    ul li a.#{$ns}-toggle {
+        width: 100%;
+        display: block;
+        background: $companyname_darker_blue;
+        color: $white;
+        padding: $default_padding*3;
+        border-radius: $default_border_radius;
+        transition: background .5s ease;
+        &:hover {
+            background: $companyname_dark_blue;
+        }
+    }
+}

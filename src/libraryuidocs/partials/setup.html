@@ -1,0 +1,123 @@
+<div class="row libraryuidocs-partials-banner">
+    <h1>Setup and Customization</h1>
+</div>
+<div class="container libraryuidocs-setup-container">
+    <p>Once download it is advisable to first install/setup without changing anything (get your staging folder) and then customize(name changes)</p>
+    <h1 class="libraryuidocs-hero-section-title">Setup and Installation</h1>
+    <p class="libraryuidocs-hero-section-paragraph">
+        <div class="libraryuidocs-number-order">
+            <ol>
+                <li>Do all your command line installation in that 'build' folder. You can also install packages globally from within that folder using -g</li>
+                <li>Install <a href="https://nodejs.org">Node js</a> globally</li>
+                <li>In general now a days NPM js comes with Node installation, but you can also check with the following link, <a href="https://www.npmjs.com/package/npm-check">NPM Check</a>
+                    <br /> if not installed then follow instruction in <a href="https://docs.npmjs.com/cli/install">Install NPM</a> </li>
+                <li>Install <a href="http://gruntjs.com/getting-started">Grunt package</a></li>
+                <li>Install <a href="https://www.ruby-lang.org/en/documentation/installation">Ruby package</a></li>
+                <li>Install <a href="http://sass-lang.com/install">Sass</a></li>
+                <li>Now do a ‘npm install’ again to load all your require npm locally</li>
+                <li>Now run the command 'grunt build' to build the framework. This will create a staging folder in your project directory. Inside the the staging folder you will find the 'index.html' file. <br />If you want a continuous watch in your build command, then just run command 'grunt'</li>
+                <li>Now you are all set, open browser and open the index.html file under staging folder</li>
+            </ol>
+        </div>
+    </p><br />
+    <h1 class="libraryuidocs-hero-section-title">Customization</h1>
+    <p class="libraryuidocs-hero-section-paragraph">
+        <div class="libraryuidocs-number-order">
+            <ol>
+                <li>Rename or place both the "build" and "src" folders in the custom/client name folder and then at the top main custom/client folder level find and replace the following words
+                <ul>
+                    <li>- classnameui  with their desired name e.g. aigui</li>
+                    <li>- classnamejs  with their desired name e.g. aigjs</li>
+                    <li>- companyname  with their desired name e.g. aig</li>
+                    <li>- MyCompany  with their desired name e.g. AIG Corp.</li>
+                </ul>
+                </li>
+                <li>Once completed then run ‘grunt build’ command</li>
+            </ol>
+        </div>
+    </p>
+    <h1 class="libraryuidocs-hero-section-title">Adding CSS and HTML</h1>
+    <p>When you need to add a new element or module, then you need to create both the scss file under CSS folder and the html file under templates folder. Also you need to add the snippets portion</p>
+    <p><strong>Step One: Adding the new scss file</strong></p>
+    <p class="libraryuidocs-hero-section-paragraph">
+        <div class="libraryuidocs-number-order">
+            <ol>
+                <li>Create a new file with .scss extension under appropriate elements or modules folder under css/****</li>
+                <li>Open mainui.scss fie and add the new file name accordingly</li>
+            </ol>
+        </div>
+    </p>
+    <p><strong>Step Two: Adding the new html file</strong></p>
+    <p class="libraryuidocs-hero-section-paragraph">
+        <div class="libraryuidocs-number-order">
+            <ol>
+                <li>Create a new file with .html extension under appropriate elements or modules folder under templates/***</li>
+                <li>Open one of the starter-template.html found in the elements or modules folder</li>
+                <li>Copy the whole content of the starter-template.html and paste it in the new file </li>
+                <li>In line 2, change the id="yourid" to the id name you want to call it, remember it is the unique ID which will become the sub-menu list</li>
+                <li>Change the ‘main title’ and the ‘sub title’ to your elements or modules name</li>
+                <li>It is better to keep the file name, ID name and the main tile name same</li>
+            </ol>
+        </div>
+    </p>
+    <p><strong>Step Three: Adding the newly created file to the sub menu list</strong></p>
+    <p class="libraryuidocs-hero-section-paragraph">
+        <div class="libraryuidocs-number-order">
+            <ol>
+                <li>Under ‘libraryuidocs/partials/’ folder you will find corresponding html files</li>
+                <li>Add the newly created file name as an 'li' tag with the ID you provided.</li>
+            </ol>
+        </div>
+    </p>
+    <p><strong>Step Four: Adding it to the build</strong></p>
+    <p class="libraryuidocs-hero-section-paragraph">
+        <div class="libraryuidocs-number-order">
+            <ol>
+                <li>Open the partials.json file under the ‘build’ folder</li>
+                <li>Update the newly created elements or modules which you have just created within appropriate place</li>
+                <li>Copy the whole content of the starter-template.html and paste it in the new file <br />
+                e.g. if it is a module then <br />
+"templates/modules/newfile.html": "#inserted-modules",<br />
+
+if it is an element then<br />
+"templates/elements/newfile.html": "#inserted-elements",<br />
+</li>
+            </ol>
+        </div>
+    </p>
+    <p><strong>Step Four: Adding the snippets</strong></p>
+    <p class="libraryuidocs-hero-section-paragraph">
+        <div class="libraryuidocs-number-order">
+            <ol>
+                <li>Create a new file with .html extension under templates/snippets and under approprieate folder section to match, e.g element/modules</li>
+                <li>the name of the file should be saved as "filename_filename_0_template.html" e.g. if creating for a logo.html then the snippet should be named as "logo_logo_0_template.html</li>
+                <li>Paste the code portion only and save it</li>
+                <li>You should be able to see the code</li>
+            </ol>
+        </div>
+    </p>
+    <h1 class="libraryuidocs-hero-section-title">Adding JavaScript</h1>
+<p>The primary purpose of this library is primarily an organization of writing CSS and HTML and is advised to hand it over to development environment to use their JavaScript.<br />
+But you can also write your own JavaScript but adding into AMD module setup as it has requirejs configuration.
+</p>
+<p><strong>Step One: Adding JS file</strong></p>
+    <p class="libraryuidocs-hero-section-paragraph">
+        <div class="libraryuidocs-number-order">
+            <ol>
+                <li>Add the new JS file under js/modules/</li>
+                <li>Create and use AMD wrapper as shown in some current JS files</li>
+            </ol>
+        </div>
+    </p>
+    <p><strong>Step Two: Adding JS to build</strong></p>
+    <p class="libraryuidocs-hero-section-paragraph">
+        <div class="libraryuidocs-number-order">
+            <ol>
+                <li>Open paths.json file under ‘build’ folder</li>
+                <li>Add the newly created JS file appropriately</li>
+            </ol>
+        </div>
+    </p>
+    
+</div>
+<!-- don't load partials again -->

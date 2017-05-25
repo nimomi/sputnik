@@ -1,0 +1,44 @@
+.#{$ns}-radio-block {
+  position: relative;
+
+    input {
+      display:none;
+
+      + .#{$ns}-radio-label {
+        display:inline-block;
+
+        .#{$ns}-radio-outer {
+          display:inline-block;
+          width:18px;
+          height:18px;
+          cursor:pointer;
+          border-radius:  50%;
+          border: 1px solid $companyname_dark_grey;
+          background-color: $white;
+
+        }
+      }
+    }
+
+    :checked + .#{$ns}-radio-label {
+
+      .#{$ns}-radio-outer .#{$ns}-radio-inner{
+          background-color: $companyname_darker_blue;
+          display: inline-block;
+          border-radius: 50%;
+          border:0;
+          width:12px;
+          height:12px;
+          margin:0 0 3px 2px;
+        }
+      .#{$ns}-check-outer .#{$ns}-checkbox-check{
+            display: inline-block;
+        }
+    }
+
+  .#{$ns}-radio-label-text {
+    position: relative;
+    bottom: 2px;
+    color: $companyname_text_color;
+  }
+}

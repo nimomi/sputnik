@@ -1,0 +1,71 @@
+//blues
+.#{$ns}-blue {
+  background-color: $companyname_blue;
+  color: $white;
+}
+.#{$ns}-darkerblue {
+  background-color: $companyname_darker_blue;
+  color: $white;
+}
+.#{$ns}-darkblue {
+  background-color: $companyname_dark_blue;
+  color: $white;
+}
+.#{$ns}-lightblue {
+  background-color: $companyname_light_blue;
+  color: $companyname_dark_blue;
+}
+.#{$ns}-lighterblue {
+  background-color: $companyname_lighter_blue;
+  color: $companyname_dark_blue;
+}
+
+//greys
+.#{$ns}-darkergrey {
+  background-color: $companyname_darker_grey;
+  color: $white;
+}
+.#{$ns}-darkgrey {
+  background-color: $companyname_dark_grey;
+  color: $white;
+}
+.#{$ns}-grey {
+  background-color: $companyname_grey;
+  color: $black;
+}
+.#{$ns}-lightgrey {
+  background-color: $companyname_light_grey;
+  color: $black;
+}
+.#{$ns}-lightergrey {
+  background-color: $companyname_lighter_grey;
+  color: $companyname_text_color;
+}
+
+
+//other colors
+.#{$ns}-orange {
+  background-color: $companyname_orange;
+  color: $white;
+}
+.#{$ns}-green {
+  background-color: $companyname_green;
+  color: $white;
+}
+.#{$ns}-red {
+  background-color: $companyname_red;
+  color: $white;
+}
+.#{$ns}-yellow {
+  background-color: $companyname_yellow;
+  color: $black;
+}
+.#{$ns}-brown {
+  background-color: $companyname_brown;
+  color: $white;
+}
+.#{$ns}-grape {
+  background-color: $companyname_grape;
+  color: $white;
+}
+

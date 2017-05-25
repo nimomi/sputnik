@@ -1,0 +1,42 @@
+.#{$ns}-checkbox {
+  display: inline-block;
+
+  input[type="checkbox"] {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+
+        + label {
+        cursor: pointer;
+
+          div {
+            background: $white;
+            border: 3px solid $companyname_light_grey;
+            width: 20px;
+            height: 20px;
+            padding: 9px;
+            border-radius: 3px;
+            position: relative;
+            top: 0px;
+            display: inline-block;
+
+            .#{$ns}-checkbox-check {
+              font-size: 1.1rem;
+              bottom: 0;
+              left: 0;
+              display: none;
+              color: $companyname_darker_blue;
+              position: absolute;
+            }
+          }
+      }
+
+      &:checked + label div .#{$ns}-checkbox-check {
+        display: block;
+      }   
+  }
+
+  &-text {
+    position: relative;
+    bottom: 5px;
+  }
+}

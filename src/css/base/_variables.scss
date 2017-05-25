@@ -1,0 +1,94 @@
+/****************************************************************************************
+*************************** Theme For the MyCompany UI Library *********************************
+***************************************************************************************/
+
+$theme: "MyCompany-Corporate" !default;
+
+/*
+ * Pseudo namespace with a ns- prefix For the MyCompany UI Library
+ */
+$ns: "classnameui";
+
+
+/****************************************************************************************
+*************************** Break points for responsive *********************************
+***************************************************************************************/
+$small: 768px;
+$medium: 992px;
+$large: 1200px;
+$max-small: 767px;
+$max-medium: 991px;
+$max-large: 1199px;
+
+$breakpoints: ( 'small': (min-width: $small), 'medium': (min-width: $medium), 'large': (min-width: $large), 'max-small': (max-width: $max-small), 'max-medium': (max-width: $max-medium), 'max-large': (max-width: $max-large) );
+
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+  @if $raw-query {
+    $query: if(type-of($raw-query) == 'string', unquote($raw-query), inspect($raw-query));
+    @media #{$query} {
+      @content;
+    }
+  }
+  @else {
+    @error 'No value found for `#{$breakpoint}`. ' + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
+
+
+/****************************************************************************************
+************************************** Color *******************************************
+***************************************************************************************/
+/*
+ * MyCompany Standard Colors for MyCompany UI Library
+ */
+$companyname_blue: #00a4e4; // Base color for entire theme
+$companyname_dark_blue: #0073ae;
+$companyname_darker_blue: #005984;
+$companyname_light_blue: #50c8e8;
+$companyname_lighter_blue: #ade0ee;
+$companyname_darker_grey: #333333;
+$companyname_dark_grey: #76777b;
+$companyname_grey: #a8a8aa;
+$companyname_light_grey: #d1d0ce;
+$companyname_lighter_grey: #f0f0f0;
+
+
+/*
+ * MyCompany Secondary Colors for MyCompany UI Library
+ */
+$companyname_orange: #e36f1e;
+$companyname_green: #558B2F;
+$companyname_light_green: #b8e986;
+$companyname_red: #c41c30;
+$companyname_yellow: #fdb913;
+$companyname_grape: #b0237c;
+$companyname_brown: #886146;
+
+/*
+ * MyCompany Supporting Colors for MyCompany UI Library
+ */
+$black: #000;
+$white: #fff;
+$companyname_text_color: #444;
+$switch_background_color: $companyname_light_grey;
+
+
+
+/****************************************************************************************
+************************ Padding, Margins and Border Radius *****************************
+****************************************************************************************/
+$default_margin: 5px;
+$default_padding: 5px;
+$default_border_radius: 4px;
+$default_border_padding: 5px;
+
+/****************************************************************************************
+*************************************** Paths *******************************************
+****************************************************************************************/
+
+$image_path: '../assets/images/';
+$sprites: $image_path; // + 'sprites/';
+$miscImages: $image_path + 'misc/';
+
+

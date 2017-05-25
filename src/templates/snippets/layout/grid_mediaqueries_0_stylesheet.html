@@ -1,0 +1,21 @@
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $small) { ... }
+/* Or write the following way too */
+@include respond-to('small') { ... }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $medium) { ... }
+/* Or write the following way too */
+@include respond-to('medium') { ... }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $large) { ... }
+/* Or write the following way too */
+@include respond-to('large') { ... }
+
+
+/* In edge cases writing inbetween media queries */
+@media (min-width: $small) and (max-width: $max-medium) { ... }

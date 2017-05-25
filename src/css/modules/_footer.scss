@@ -1,0 +1,11 @@
+.#{$ns}-footer {
+    padding: $default_padding*8 0;
+    margin-top: $default_margin*8;
+    background-color: $companyname_darker_grey;  
+    color: $white;  
+    text-align: center;   
+
+    img {
+        width: 300px;
+    }   
+}

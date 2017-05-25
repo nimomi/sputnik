@@ -1,0 +1,139 @@
+.#{$ns}-switch {
+	position: relative;
+	&-wrap{
+		display: inline-block;
+		width: 46px;
+		height: 26px;
+		background-color: $switch_background_color;
+		@include border-radius($default_border_radius*6);  
+		cursor: pointer;
+		position: relative;
+		vertical-align: middle;
+		overflow: hidden;
+
+			&:before {
+				background-color: $switch_background_color;
+			}
+			&:after {
+				background-color: $companyname_green;
+			}
+		}
+	&-text{
+		font-size: 1rem;
+		position: relative;
+		display: inline-block;
+		padding-left: 5px;
+		top:3px;
+	}
+}
+
+.#{$ns}-switch-label{
+	position: relative;
+	display: block;
+	height: inherit;
+	background: $switch_background_color;
+	border-radius: inherit;
+
+	&:before{
+		content: attr(data-off);
+		right: 11px;
+	}
+	&:after{
+		content: attr(data-on);
+		left: 11px;
+		opacity: 0;
+	}
+}
+
+.#{$ns}-switch-input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+
+	&:checked ~ .#{$ns}-switch-handle {
+		left: 20px;
+	}
+
+	&:checked ~ .#{$ns}-switch-label {
+		background-color: $companyname_green;
+		&:before{
+			opacity: 0;
+		}
+		&:after{
+			opacity: 1;
+		}
+	}
+
+	&:checked ~ .#{$ns}-switch-handle {
+		@include border(2px, solid, $companyname_green, "");
+	}
+}
+
+.#{$ns}-switch-handle {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 26px;
+	height: 26px;
+	background: $white;
+	@include border(2px, solid, $switch_background_color, "");
+	@include border-radius(100%);  
+
+	&:before{
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -6px 0 0 -6px;
+		width: 12px;
+		height: 12px;
+		background: $white;
+		@include border-radius(6px);
+	}
+}
+
+.#{$ns}-switch-left-right{
+	&:before, &:after{
+		width: 20px;
+		height: 20px;
+		top: 4px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding: 11px 0 0 0;
+		text-indent: -12px;
+		@include border-radius(20px);
+	}
+}
+
+.#{$ns}-switch-left-right .#{$ns}-switch-label {
+	overflow: hidden;
+}
+
+.#{$ns}-switch-left-right .#{$ns}-switch-label {
+	%commen{
+		width: 20px;
+		height: 20px;
+		top: 4px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding: 11px 0 0 0;
+		text-indent: -12px;
+		@include border-radius(20px);
+	}
+	&:before{
+		@extend %commen;
+		text-align: left;
+		padding-left: 80px;
+	}
+	&:before{
+		@extend %commen;
+		text-align: left;
+		text-indent: 9px;
+		left: -100px;
+		opacity: 1;
+		width: 100%;
+	}
+}

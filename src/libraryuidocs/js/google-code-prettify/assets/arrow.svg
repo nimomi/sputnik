@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 56 56"
+	 style="enable-background:new 0 0 56 56;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#E31837;}
+</style>
+<title>arrow</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1" sketch:type="MSPage">
+	<g id="arrow" sketch:type="MSLayerGroup">
+		<path id="Shape" sketch:type="MSShapeGroup" class="st0" d="M29.1,35.6v-21h-2.1v21l-8.3-8.3l-1.5,1.5L28,39.6l10.8-10.8l-1.5-1.5
+			L29.1,35.6z"/>
+		<path id="Shape_1_" sketch:type="MSShapeGroup" class="st0" d="M28,0C12.6,0,0,12.6,0,28s12.6,28,28,28s28-12.6,28-28S43.4,0,28,0
+			L28,0z M28,53.9C13.7,53.9,2.1,42.3,2.1,28S13.7,2.1,28,2.1S53.9,13.7,53.9,28S42.3,53.9,28,53.9L28,53.9z"/>
+	</g>
+</g>
+</svg>

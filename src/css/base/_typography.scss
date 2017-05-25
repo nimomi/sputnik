@@ -1,0 +1,81 @@
+/****************************************************************************************
+************************************ fonts ***************************************
+****************************************************************************************/
+
+$fontname1: "OpenSans";
+$fontname2: "Lato";
+$fontname3: "Roboto";
+$fontname4: "BadScript";
+
+
+@font-face {
+  font-family: $fontname1;
+  src: url('base/fonts/OpenSans-Regular.eot');
+  src: url('base/fonts/OpenSans-Regular.eot?#iefix&v=4.3.0') format('embedded-opentype'), 
+  url('base/fonts/OpenSans-Regular.woff') format('woff'), 
+  url('base/fonts/OpenSans-Regular.ttf') format('truetype'), 
+  url('base/fonts/OpenSans-Regular.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $fontname2;
+  src: url('base/fonts/Lato-Regular.eot');
+  src: url('base/fonts/Lato-Regular.eot?#iefix&v=4.3.0') format('embedded-opentype'), 
+  url('base/fonts/Lato-Regular.woff') format('woff'), 
+  url('base/fonts/Lato-Regular.woff2') format('woff2'),
+  url('base/fonts/Lato-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $fontname3;
+  src: url('base/fonts/Roboto-Regular.eot');
+  src: url('base/fonts/Roboto-Regular.eot?#iefix&v=4.3.0') format('embedded-opentype'), 
+  url('base/fonts/Roboto-Regular.woff') format('woff'), 
+  url('base/fonts/Roboto-Regular.ttf') format('truetype'), 
+  url('base/fonts/Roboto-Regular.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $fontname4;
+  src: url('base/fonts/BadScript-Regular.eot');
+  src: url('base/fonts/BadScript-Regular.eot?#iefix&v=4.3.0') format('embedded-opentype'), 
+  url('base/fonts/BadScript-Regular.woff') format('woff'), 
+  url('base/fonts/BadScript-Regular.ttf') format('truetype'), 
+  url('base/fonts/BadScript-Regular.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
+ * type styles
+ */
+
+body {
+    font-family: $fontname3;
+}
+
+a {
+  color: $companyname_blue;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.25;
+  text-align: left;
+  margin: $default_margin*2 0;
+}
+
+strong {
+  font-weight: bold;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}

@@ -1,0 +1,206 @@
+.#{$ns}-datepicker {
+  &.#{$ns}-input {
+
+    input {
+      padding: 15px 15px 15px 50px;
+    }
+  }
+  .#{$ns}-callendar-icon {
+      position: absolute;
+      padding: 15px;
+      color: $companyname_text_color;
+  }
+
+  &.#{$ns}-floating-input {
+
+    input {
+      padding: 15px 15px 15px 50px;
+    }
+    > label {
+      padding: $default_padding*3 $default_padding*2 $default_padding*3 $default_padding*10;
+    }
+
+    input:focus + label {
+      padding: $default_padding*0 $default_padding*2 $default_padding*0 $default_padding*10;
+    }
+  }
+}
+
+/* below are style related to metroui js styles */
+.calendar {
+  width: 100%;
+  /*min-width: 13.75rem;*/
+  border: 1px $companyname_lighter_grey solid;
+  font-size: .75rem;
+  padding: .3125rem;
+  background-color: $white;
+}
+.calendar .calendar-grid {
+  margin: 0;
+  padding: 0;
+}
+.calendar .calendar-row {
+  margin: 0 0 .3125rem;
+  width: 100%;
+}
+.calendar .calendar-row:before,
+.calendar .calendar-row:after {
+  display: table;
+  content: "";
+}
+.calendar .calendar-row:after {
+  clear: both;
+}
+.calendar .calendar-row:last-child {
+  margin-bottom: 0;
+}
+.calendar .calendar-cell {
+  width: 12.46201429%;
+  margin: 0 0 0 2.12765%;
+  display: block;
+  float: left;
+}
+.calendar .calendar-cell:first-child {
+  margin-left: 0;
+}
+.calendar .calendar-cell.sel-month {
+  width: 41.64134286%;
+}
+.calendar .calendar-cell.sel-year {
+  width: 48.936175%;
+}
+.calendar .calendar-cell.sel-plus,
+.calendar .calendar-cell.sel-minus {
+  width: 23.4042625%;
+}
+.calendar .calendar-cell.month-cell,
+.calendar .calendar-cell.year-cell {
+  width: 23.4042625%;
+}
+.calendar .calendar-actions .button {
+  margin: .15625rem;
+}
+.calendar .day-of-week {
+  padding: .3125rem;
+  cursor: default;
+}
+.calendar a {
+  display: block;
+  padding: .3125rem 0;
+}
+.calendar a:hover {
+  background-color: $companyname_grey;
+  color: $white;
+  border-radius: inherit;
+}
+.calendar .calendar-header {
+  background-color: $companyname_blue;
+  color: $white;
+}
+.calendar .calendar-header a {
+  color: $white;
+  padding: .325rem;
+}
+.calendar .calendar-header a:hover {
+  background-color: $companyname_dark_blue;
+  color: $white;
+}
+.calendar .calendar-actions:before,
+.calendar .calendar-actions:after {
+  display: table;
+  content: "";
+}
+.calendar .calendar-actions:after {
+  clear: both;
+}
+.calendar .today a {
+  background-color: $companyname_light_green;
+  color: $companyname_green;
+}
+.calendar .day {
+  border: 1px $companyname_light_grey solid;
+  text-align: center;
+}
+.calendar .day a {
+  display: block;
+  position: relative;
+  text-align: center;
+}
+.calendar .month,
+.calendar .year {
+  border: 1px $companyname_light_grey solid;
+}
+.calendar .month a,
+.calendar .year a {
+  padding-top: 1.3125rem;
+  padding-bottom: 1.3125rem;
+}
+.calendar .empty {
+  cursor: default;
+}
+.calendar .other-day {
+  display: block;
+  text-align: center;
+  color: #999999;
+  padding: .325rem;
+  background-color: #eeeeee;
+  border: 1px $companyname_light_grey solid;
+}
+.calendar .exclude {
+  background-color: #ce352c;
+}
+.calendar .exclude a {
+  cursor: not-allowed;
+  background-color: #ce352c;
+  color: $white;
+}
+.calendar .stored {
+  background-color: #f472d0;
+}
+.calendar .stored a {
+  cursor: pointer;
+  background-color: #f472d0;
+  color: $white;
+}
+.calendar .selected {
+  background-color: $companyname_grey;
+}
+.calendar .selected a {
+  background-color: $companyname_grey;
+  color: $white;
+}
+.calendar.rounded button {
+  border-radius: 0.3125rem;
+}
+.calendar.rounded .day,
+.calendar.rounded .month,
+.calendar.rounded .year,
+.calendar.rounded .other-day,
+.calendar.rounded .today,
+.calendar.rounded .calendar-header,
+.calendar.rounded .selected {
+  border-radius: 0.3125rem;
+}
+.calendar.rounded .today a,
+.calendar.rounded .selected a,
+.calendar.rounded .exclude a {
+  border-radius: 0.3125rem;
+}
+.calendar.rounded .calendar-header a:hover {
+  border-radius: 0.3125rem;
+}
+.calendar.no-border .day,
+.calendar.no-border .month,
+.calendar.no-border .year,
+.calendar.no-border .other-day,
+.calendar.no-border .today,
+.calendar.no-border .calendar-header {
+  border: 0;
+}
+.calendar.no-border .today a {
+  border: 0;
+}
+.calendar-dropdown {
+  border: 0;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+}

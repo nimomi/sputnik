@@ -1,0 +1,46 @@
+.#{$ns}-select {
+  position: relative;
+
+  select {
+    font-size: 1rem;
+    padding: $default_padding*3;
+    margin: 0;
+    text-align: left;
+    width: 100%;
+    color: $companyname_text_color;
+    border: 1px solid $companyname_light_grey;
+    border-radius: $default_border_radius;
+    appearance: none;
+
+    &:hover, &:active, &:focus {
+        @include border(1px, solid, $companyname_darker_blue, "");
+    }
+
+    &:disabled {
+      background-color: $companyname_lighter_grey;
+      @include border(1px, solid, $companyname_light_grey, "");
+    }
+  }
+  select::-ms-expand {  
+    display: none; 
+  }
+
+  &.#{$ns}-input-error select {
+    border: 1px solid $companyname_red;
+    color: $companyname_red;
+
+    &:hover, &:active, &:focus {
+        @include border(1px, solid, $companyname_red, "");
+        outline: none;
+      }
+  }
+
+  .#{$ns}-arrow {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: $companyname_text_color;
+    font-size: 1.5rem;
+  }
+
+}

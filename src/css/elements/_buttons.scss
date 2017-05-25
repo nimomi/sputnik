@@ -1,0 +1,57 @@
+  
+/* ---------- start of some button variable sets -------------- */
+
+$button_default_color: $companyname_blue;
+$primary_button_padding: $default_padding*3 $default_padding*6;
+$secondary_button_padding: $default_padding*2 $default_padding*3;
+$primary_button_margin: $default_margin*2;
+$invert_button_padding: 9px 24px;
+
+/* ---------- end of some button variable sets -------------- */
+
+.#{$ns}-button {
+  display: inline-block;
+  @include border-radius($default_border_radius);
+  @include box-shadow();
+  padding: $primary_button_padding;
+  background-color: $button_default_color;
+  font-size: 1rem;
+  margin-bottom: $primary_button_margin;
+  color: $white;
+  outline: none;
+  border: none;
+  &:hover,
+  &:visited,
+  &:active,
+  &:focus {
+    background-color: $companyname_dark_blue;
+    border-color: $companyname_dark_blue;
+  }
+
+  &:disabled {
+    background-color: $companyname_lighter_blue;
+    border-color: $companyname_lighter_blue;
+  }
+
+  .#{$ns}-button-icon-left {
+    margin-left: $default_margin*2;
+  }
+  .#{$ns}-button-icon-right {
+    margin-right: $default_margin*2;
+  }
+  &.#{$ns}-fluid {
+    width: 100%;
+  }
+  &.#{$ns}-small {
+    padding: $secondary_button_padding;
+  }
+  &.#{$ns}-oval {
+    @include border-radius($default_border_radius*5);
+    .#{$ns}-icon {
+      margin-left: 5px;
+    }
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,47 @@
+.#{$ns}-card{
+    display: flex;
+    position: relative;
+
+    h3 {
+        font-size: 1rem;
+        line-height: 0.75rem;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    &.#{$ns}-card-vertical {
+        flex-direction: column;
+        text-align: center;
+        @include respond-to('small') {
+            border: 1px solid $companyname_light_grey;
+        }
+        
+        .#{$ns}-card-content{
+            margin: 20px 0;
+            padding: 0 15px;
+        }
+
+        p {
+            text-align: center;
+            margin: 20px 0;
+        }
+    }
+
+    &.#{$ns}-card-horizontal {
+        flex-direction: row;
+
+        .#{$ns}-card-content {
+            margin: 0 0 0 20px;
+        }
+
+        &.#{$ns}-card-reverse {
+            flex-direction: row-reverse;
+
+            .#{$ns}-card-content {
+                margin: 0 20px 0 0;
+            }
+        }
+    }
+}

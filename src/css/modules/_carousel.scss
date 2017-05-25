@@ -1,0 +1,92 @@
+.#{$ns}-carousel {
+    position: relative;
+
+    .#{$ns}-card-image {
+    	width: 100%;
+    }
+
+    .#{$ns}-card {
+        flex-direction: column;
+
+        @include respond-to('small') {
+            flex-direction: row;
+        }
+    }
+
+    .#{$ns}-card-content {
+    	position: relative;
+    	width: 100%;
+    	top: 0;
+    	left: 0;
+    	bottom: 0;
+    	background: $companyname_darker_grey;
+
+        @include respond-to('small') {
+            position: absolute;
+            width: 50%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    .#{$ns}-carousel-indicators {
+    	position: relative;
+    	text-align: center;
+    	padding-top: $default_padding;
+    	ol {	
+	    	li {
+	    		background: $companyname_grey;
+			    border: solid 1px $companyname_grey;
+			    display: inline-block;
+			    width: 10px;
+			    height: 10px;
+			    border-radius: 10px;
+			    cursor: pointer;
+
+			    &.active {
+			    	background: $companyname_darker_grey;
+			    	border: solid 1px $companyname_darker_grey;
+			    }
+	    	}
+    	}
+    }
+    .#{$ns}-card-content {
+    	padding: $default_padding*6;
+
+    	h3 a {
+    		color: $companyname_grey;
+    		font-size: 1.3rem;
+   		}
+    	p {
+    		color: $white;
+    		padding-top: $default_padding*3;
+    		font-size: 1.4rem;
+    	}
+    }
+    .#{$ns}-carousel-controls {
+    	position: relative;
+    	bottom: 32px;
+    	font-size: 1.9rem;
+        margin: 0 42%;
+        display: none;
+        @include respond-to('small') {
+            display: block;
+        }
+
+
+    	a {
+    		color: $companyname_darker_grey;
+    	}
+
+    	.#{$ns}-prev {
+    		position: absolute;
+    		left: 0;
+    	}
+    	.#{$ns}-next {
+    		position: absolute;
+    		right: 0;
+    	}
+    }
+    .#{$ns}-carousel-inner {
+      overflow: hidden;
+    }
+}

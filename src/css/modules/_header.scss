@@ -1,0 +1,72 @@
+.#{$ns}-header {
+    background-color: $companyname_green;
+    color: $white;
+    font-size: 1rem;
+    .#{$ns}-logo-wrapper {
+        font-size: 1.2rem;
+        padding: $default_padding*5 0;
+        .#{$ns}-logo-text {
+            padding-left: $default_padding;
+        }
+    }
+    a.#{$ns}-logo {
+        color: $white;
+        font-weight: bold;
+    }
+    .#{$ns}-menu-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        padding: $default_padding*5 0;
+        margin-right: -$default_margin*3;
+    }
+    &-list ul {
+        display: flex;
+        flex-direction: row;
+        li {
+            padding: 0 $default_padding;
+            @include respond-to('small') {
+                padding: 0 $default_padding*2;
+            }
+            a {
+                color: $companyname_light_green;
+                padding-right: inherit;
+                &:hover {
+                    color: #76FF03;
+                }
+                &.active {
+                    color: $white;
+                }
+            }
+            &.#{$ns}-setup {
+                font-size: 1rem;
+                border-left: 0;
+                margin: -25px 0;
+                padding: 26px 2px 22px 2px;
+                @include respond-to('medium') {
+                    border-left: 1px solid rgba(0,0,0,.15) !important;
+                }
+                @include respond-to('small') {
+                    font-size: 1.5rem;
+                    border-left: 0;
+                    margin: -25px 0;
+                    padding: 22px 15px 22px 15px;
+                }
+            }
+            &.#{$ns}-download {
+                font-size: 1rem;
+                border-left: 0;
+                margin: -25px 0;
+                padding: 26px 2px 22px 2px;
+                @include respond-to('medium') {
+                    border-left: 1px solid rgba(0,0,0,.15) !important;
+                }
+                @include respond-to('small') {
+                    font-size: 1.5rem;
+                    border-left: 0;
+                    margin: -25px 0;
+                    padding: 22px 15px 22px 15px;
+                }
+            }
+        }
+    }
+}

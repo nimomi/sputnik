@@ -1,0 +1,83 @@
+/* Menu Container */
+.classnameui-megamenu {
+	position: relative;
+	z-index: 1005;
+	display: flex;
+	flex-direction: row;
+
+	> li {
+		display: block;
+		flex: 1;
+
+		> a {
+			position: relative;
+			display: block;
+			z-index: 1006;
+			height: 54px;
+			text-align: center;
+			line-height: 54px;
+			font-size: 1rem;
+			color: #fcfcfc;
+			background: $companyname_dark_blue;
+			border-left: 1px solid $companyname_lighter_blue;
+			border-right: 1px solid $companyname_lighter_blue;
+			transition: all .3s ease;
+		}
+		&:hover > a {
+			background: $companyname_blue;
+			}
+
+		&:first-child > a {
+			border-left: none;
+		}
+
+		> div {
+			position: absolute;
+			display: block;
+			width: 100%;
+			top: 50px;
+			left: 0;
+			opacity: 0;
+			visibility: hidden;
+			overflow: hidden;
+			background: $white;
+			border-radius: 0 0 3px 3px;
+			transition: all .3s ease .15s;
+		}
+		&:hover > div {
+			opacity: 1;
+			visibility: visible;
+			overflow: visible;
+		}
+	}
+	&-column {
+		float: left;
+		width: 20%;
+		padding: 2.5%;
+
+		h3 {
+			margin: 20px 0 10px 0;
+			line-height: 18px;
+			font-size: 0.85rem;
+			color: $black;
+			font-weight: bold;
+			text-transform: uppercase;
+
+			&.orange {
+				color: $companyname_orange;
+			}
+		}
+
+		li a {
+			display: block;
+			line-height: 15px;
+			font-size: 0.75rem;
+			margin-bottom: $default_padding*2;
+			color: $companyname_dark_grey;
+
+			&:hover {
+				color: $companyname_darker_grey;
+			}
+		}
+	}
+}
