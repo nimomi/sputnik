@@ -1,0 +1,50 @@
+{
+	"jquery": {
+		"path": "../../js/jquery.min",
+		"varName": "$"
+	},
+
+	"logger": {
+		"path": "../../js/logger"
+	},
+
+	"accordion": {
+		"path": "../../js/modules/accordion"
+	},
+
+	"carousel": {
+		"path": "../../js/modules/carousel"
+	},
+
+	"charactercounter": {
+		"path": "../../js/modules/charactercounter"
+	},
+
+	"modal": {
+		"path": "../../js/modules/modal"
+	},
+
+	"tabs": {
+		"path": "../../js/modules/tabs"
+	},
+
+	"tooltip": {
+		"path": "../../js/modules/tooltip"
+	},
+
+	"load-partials": {
+		"path": "load-partials"
+	},
+
+	"libraryuidocs-menu": {
+		"path": "libraryuidocs-menu"
+	},
+
+	"libraryuidocs": {
+		"path": "libraryuidocs"
+	},
+
+	"prettify": {
+		"path": "google-code-prettify/prettify"
+	}
+}
